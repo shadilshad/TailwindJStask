@@ -27,3 +27,10 @@ const multi=(b,c)=>{
     return "B x C is " + ( b*c)
 };
 console.log(multi(5,7));
+
+let globalVar = "Global";
+
+function show() {
+  console.log(globalVar); 
+}
+console.log(globalVar); 

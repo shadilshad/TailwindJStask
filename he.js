@@ -34,3 +34,22 @@ function show() {
   console.log(globalVar); 
 }
 console.log(globalVar); 
+
+
+function createCounter() {
+  let count = 0;
+
+  return {
+    increment: () => ++count,
+    decrement: () => --count,
+    reset: () => (count = 0),
+    get: () => count
+  };
+}
+
+let counter = createCounter();
+
+console.log(counter.increment()); 
+console.log(counter.increment());
+console.log(counter.get());
+console.log(counter.reset());

@@ -49,7 +49,3 @@ function createCounter() {
 
 let counter = createCounter();
 
-console.log(counter.increment()); 
-console.log(counter.increment());
-console.log(counter.get());
-console.log(counter.reset());

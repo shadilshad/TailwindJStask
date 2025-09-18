@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM + Events + Forms</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .error { color: red; font-size: 14px; }
+    .success { color: green; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">Welcome!</h1>
+  <p class="msg">Fill out the form below 👇</p>
+
+  <form id="myForm">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email"><br><br>
+
+    <button type="submit" id="submitBtn">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    let title = document.getElementById("title");
+    let msg = document.querySelector(".msg");
+    let form = document.getElementById("myForm");
+    let username = document.getElementById("username");
+    let email = document.getElementById("email");
+    let message = document.getElementById("message");
+    let submitBtn = document.getElementById("submitBtn");
+
+    title.innerText = "Hello User!";
+    msg.innerHTML = "Please <b>enter</b> your details.";
+
+    submitBtn.onclick = function() {
+      console.log("Submit button clicked (onclick)");
+    };
+    submitBtn.addEventListener("click", function() {
+      console.log("Submit button clicked (addEventListener)");
+    });
+
+    username.addEventListener("input", function() {
+      console.log("Typing username: " + username.value);
+    });
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+
+      if (username.value.trim() === "" || email.value.trim() === "") {
+        message.innerText = "⚠️ All fields are required!";
+        message.className = "error";
+      } else {
+        message.innerText = "✅ Form submitted successfully!";
+        message.className = "success";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Login - Punjab Disaster Management</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #e8f5e9; /* soft pastel green */
+    }
+
+    .login-container {
+      background: #ffffff; /* clean white */
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-container h1 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2e7d32; /* dark green */
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #a5d6a7;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .login-container input:focus {
+      border-color: #1b5e20;
+      box-shadow: 0 0 5px rgba(27,94,32,0.3);
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #2e7d32; /* primary dark green */
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background: #1b5e20;
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .signup {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .signup a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-login {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      gap: 10px;
+    }
+
+    .social-login button {
+      flex: 1;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      padding: 10px 0;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .social-login button.email-login {
+      background: #1b5e20; /* darker green */
+      color: #fff;
+    }
+
+    .social-login button.google-login {
+      background: #fff;
+      color: #444;
+      border: 1px solid #a5d6a7;
+    }
+
+    .social-login button:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Parent Login</h1>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+    <button>Sign In</button>
+
+    <div class="signup">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </div>
+
+    <div class="social-login">
+      <button class="email-login">Sign up with Email</button>
+      <button class="google-login">Sign up with Google</button>
+    </div>
+  </div>
+</body>
+</html>

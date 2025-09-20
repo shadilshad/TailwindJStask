@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login - Punjab Disaster Management</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #e0f2f1; /* soft pastel teal */
+    }
+
+    .login-container {
+      background: #ffffff; /* clean white */
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-container h1 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #00695c; /* dark teal */
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #b2dfdb;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .login-container input:focus {
+      border-color: #004d40;
+      box-shadow: 0 0 5px rgba(0,77,64,0.3);
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #00695c; /* primary color */
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background: #004d40;
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .signup {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .signup a {
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-login {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      gap: 10px;
+    }
+
+    .social-login button {
+      flex: 1;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      padding: 10px 0;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .social-login button.email-login {
+      background: #004d40; /* dark teal */
+      color: #fff;
+    }
+
+    .social-login button.google-login {
+      background: #fff;
+      color: #444;
+      border: 1px solid #b2dfdb;
+    }
+
+    .social-login button:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+    .signin-btn {
+  display: inline-block;
+  background-color: #0277bd;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.signin-btn:hover {
+  background-color: #01579b;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Student Login</h1>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+
+
+<a href="main.html" class="signin-btn">Sign In</a>
+
+    <div class="signup">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </div>
+
+    <div class="social-login">
+      <button class="email-login">Sign up with Email</button>
+      <button class="google-login">Sign up with Google</button>
+    </div>
+  </div>
+</body>
+</html>

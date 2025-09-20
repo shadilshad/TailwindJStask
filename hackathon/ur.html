@@ -5,31 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Punjab Disaster Management Portal</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #d0bdf4; /* soft, modern background */
     }
-    header {
-      background: #c8102e;
-      color: white;
-      padding: 15px 20px;
+
+    .container {
       text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
+      background: #ffffff;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
     }
-    main {
-      padding: 30px;
+
+    h1 {
+      font-size: 2rem;
+      color: #333; 
+      margin-bottom: 40px;
+    }
+
+    .roles {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .role-card {
+      flex: 1 1 150px;
+      background: #e8f0f7; /* soft pastel card */
+      padding: 25px 15px;
+      border-radius: 16px;
       text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      background: #dce7f1; /* slightly darker on hover */
+    }
+
+    .role-card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .role-card h2 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    @media (max-width: 500px) {
+      .role-card {
+        flex: 1 1 100%;
+      }
+    }
+
   </style>
 </head>
 <body>
-  <header>Punjab Disaster Management</header>
-  <main>
-    <h2>Welcome to the Portal</h2>
-    <p>Here you can access disaster preparedness resources, alerts, and emergency contacts.</p>
-  </main>
+  <div class="container">
+    <h1>Choose Your Role</h1>
+    <div class="roles">
+      <a href="student-login.html" class="role-card">
+        <img src="graduating-student.png" alt="Student">
+        <h2>Student</h2>
+      </a>
+      <a href="teacher-login.html" class="role-card">
+        <img src="teacher.png" alt="Teacher">
+        <h2>Teacher</h2>
+      </a>
+      <a href="parent-login.html" class="role-card">
+        <img src="family.png" alt="Parent">
+        <h2>Parent</h2>
+      </a>
+    </div>
+    <footer>© 2025 Government of Punjab – Disaster Management</footer>
+  </div>
 </body>
 </html>

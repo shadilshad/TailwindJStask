@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Punjab Disaster Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    }
+
+    .signup-container {
+      background: #ffffff;
+      padding: 55px; /* smaller padding */
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      width: 90%;
+      max-width: 400px; /* smaller max-width */
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .signup-container:hover {
+      box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+    }
+
+    h1 {
+      font-size: 1.8rem; /* smaller heading */
+      color: #0d3b66;
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px; /* smaller gaps */
+      text-align: left;
+    }
+
+    label {
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 4px;
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    input, select {
+      padding: 12px 14px; /* smaller inputs */
+      border-radius: 10px;
+      border: 1px solid #b0bec5;
+      font-size: 0.95rem;
+      outline: none;
+      width: 100%;
+      transition: all 0.3s ease;
+      background: #f9fafd;
+    }
+
+    input:focus, select:focus {
+      border-color: #0d3b66;
+      box-shadow: 0 0 6px rgba(13,59,102,0.2);
+    }
+
+    .signup-btn {
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0d3b66, #1d6fa5);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 8px;
+    }
+
+    .signup-btn:hover {
+      background: linear-gradient(135deg, #0b3054, #14588c);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .footer-text {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #555;
+      text-align: center;
+    }
+
+    .footer-text a {
+      color: #1d6fa5;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+      color: #0d3b66;
+    }
+
+    @media (max-width: 500px) {
+      .signup-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Create Account</h1>
+    <form>
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+      </div>
+      <div>
+        <label for="role">Role</label>
+        <select id="role" required>
+          <option value="">Select your role</option>
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+          <option value="parent">Parent</option>
+        </select>
+      </div>
+      <div>
+        <label for="school">School / Place</label>
+        <input type="text" id="school" placeholder="Enter your school or place" required>
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="signup-btn">Sign Up</button>
+    </form>
+    <div class="footer-text">
+      Already have an account? <a href="ur.html">Login here</a>
+    </div>
+  </div>
+</body>
+</html>
